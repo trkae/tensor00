@@ -1,0 +1,75 @@
+body {
+	text-align: center; 
+	font-size: 18px; 
+	font-family: sans-serif;
+}
+
+#wraper {
+	max-width: 900px; 
+	margin: 0 auto;
+	width: 900px;
+}
+
+header {
+	margin: 40px 0px;
+}
+
+header .title img {
+	height: 35px;
+}
+
+header .title img:hover {
+	outline: 1px solid #ff0000;
+	cursor: pointer;
+}
+
+header .title span {
+	font-size: 40px;
+	text-transform: uppercase;
+}
+
+header .title span:after {
+	content: '';
+	display: block;
+	border-top: 3px solid #000;
+	width: 100px;
+	margin: 20px auto;
+}
+
+header .title p {
+	margin-top: 40px; 
+}
+
+/* Моя магия
+____________________________________________
+*/
+
+div .blocs {
+	width: 30%;
+	display: inline-block;
+}
+
+div .blocs img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover; 
+	border-radius: 50%;
+}
+
+div .blocs img:hover{
+	outline: 1px solid #ff7e00;
+	cursor: pointer;
+}
+
+div .blocs p {
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+div .blocs span {
+	font-size: 0.8em;
+}
+
+div .blocs2 {
+	margin: 50px auto;
+}
