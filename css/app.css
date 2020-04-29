@@ -1,0 +1,146 @@
+/* .all {
+  width: 1440px;
+  height: 1024px;
+  background: #FFFFFF;
+} */
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  padding: 0;
+  list-style: none;
+  margin: 0; 
+  background: #2088d4;
+}
+
+.navigation .spacer {
+  flex-grow: 1;
+}
+
+.navigation a {
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: #59B9FF;
+  border-radius: 50px;
+  padding: 7px;
+  margin: 15px;
+}
+
+.navigation p {
+  text-decoration: none;
+  display: block;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.navigation p:not(.logo) {  
+  color: white;
+}
+
+
+@media screen and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+  .navigation .spacer {
+    flex-grow: 0;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a { 
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255,0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+
+.conteiner {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.conteiner__aside {
+  grid-column: span 2;
+  grid-row: span 12;
+  background: #EDEDED;
+}
+
+.conteiner__aside--block {
+  padding: 0 15px;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.conteiner__article {
+  display: flex; 
+  grid-column: span 10; 
+  background: #E5E5E5;
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.conteiner__article--block {  
+  border-radius: 10px;
+  width: 250px;
+  height: 350px;
+  background: #F3F3F3;
+  margin: 15px;
+}
+
+.conteiner__article--block img {  
+  height: 37.2%;
+  border-radius: 10px 10px 0px 0px;
+}
+
+.conteiner__article__block--Vvedenie {
+  margin: 0px 5px 3px;
+  font-family: Roboto;
+  font-size: 16px;
+  color: #464646;
+  font-weight: bold;
+}
+
+.conteiner__article__block--Date {
+  margin: 0px 5px 3px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+  color: #ABABAB;
+}
+
+.conteiner__article__block--Osnova {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 8px;
+  font-size: 12px;
+  color: #464646;
+}
+
+.conteiner__article__block--Niz {
+  background: #DCDCDC;
+  border-radius: 0px 0px 10px 10px;
+  height: 40px;
+  width: 250px;
+  margin-top: 50px;
+}
+
+.conteiner__article__block__Niz--Text {
+  text-align: center;
+}
+
+
+
