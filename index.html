@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Tensor</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="script.js"></script>
+
+</head>
+<body>
+
+  <div id="wraper">
+      <header>
+        <div class="title">
+          <img src="img/logo.jpg" alt="Логотип Tensor" />
+          <span title="Tensor School">Tensor School</span>
+          <p title="Это страница школы Тензор в городе Калининград. Тут вы можете познакомиться с нашими учениками и посмотреть темы занятий.">Это страница школы Тензор в городе Калининград. Тут вы можете познакомиться с нашими учениками и посмотреть темы занятий.</p>
+        </div>
+      </header>              
+  </div>
+
+  <main>
+    <script>
+      const studentArr = [
+        {
+            fullName: 'Маша Иванова',
+            university: 'УГАТУ',
+            course: 2,
+            birthDate: new Date(2000, 1, 1),
+            photoUrl: 'img/ava01.jpg'
+        },
+
+        {
+            fullName: 'Ирина Ириновна',
+            university: 'БФУ',
+            course: 3,
+            birthDate: new Date(2002, 2, 1),
+            photoUrl: 'img/ava02.jpg'
+        },
+
+        {
+            fullName: 'Максим Максимов',
+            university: 'УФЦ',
+            course: 4,
+            birthDate: new Date(2010, 3, 1),
+            photoUrl: 'img/ava03.jpg'
+        }
+      ];
+
+      let card = document.getElementsByTagName("main")[0];
+
+      studentArr.forEach( function(params) { 
+				let student = new Student(params);
+				student.appendToDOM(student.renderCard, card);
+			} );
+    </script>
+
+  </main>
+
+</body>
+</html>
+
