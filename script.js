@@ -96,7 +96,7 @@ class Student {
 	openCard(index){
 		let body = document.getElementsByTagName("body")[0];
 		body.appendChild(index);
-		(index.getElementsByClassName("close_btn")[0]).addEventListener("click", (event) => { index.remove(); body.style.overflow = "auto"; body.style.marginRight = "0px";}  );
+		(index.getElementsByClassName("close_btn")[0]).addEventListener("click", (event) => { index.remove() }  );
 	}
   
 }
