@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Tensor School</title>
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<header>
+		<img height="40px" src="img/logo.jpg" alt="Это страница компании Tensor">
+		<span title="Tensor School">Tensor School</span>
+		<p title="Это страница школы Тензор. Тут вы можете познакомиться с нашими учениками и посмотреть темы занятий.">Это страница школы Тензор. Тут вы можете познакомиться с нашими учениками и посмотреть темы занятий.</p>
+	</header>	
+	<main> 
+		<p class="block-title">Студенты</p>
+		<div id="students"></div>
+		<p class="block-title">Преподаватели</p>
+		<div id="teachers"></div>
+
+		<script>
+			const studentArr = [
+				{
+					fullName: 'Маша Иванова',
+					university: 'УГАТУ',
+					course: 2,
+					birthDate: new Date(2000, 1, 1),
+					photoUrl: 'img/ava01.jpg'
+				},
+				{
+					fullName: 'Ирина Ириновна',
+					university: 'БФУ',
+					course: 3,
+					birthDate: new Date(2002, 2, 1),
+					photoUrl: 'img/ava02.jpg'
+				},
+				{
+					fullName: 'Максим Максимов',
+					university: 'УФЦ',
+					course: 4,
+					birthDate: new Date(2010, 3, 1),
+					photoUrl: 'img/ava03.jpg'
+				},
+			   {
+			       fullName: 'Инна Инна',
+			       university: 'БРНУ',
+			       workFrom: new Date(1988, 1, 2),
+			       birthDate: new Date(1978, 4, 1),
+			       photoUrl: 'img/ava04.jpg'
+			   },
+			   {
+			       fullName: 'Антон Антон',
+			       university: 'ВРЕМ',
+			       workFrom: new Date(1940, 1, 1),
+			       birthDate: new Date(1890, 1, 1),
+			       photoUrl: 'img/ava05.jpg'
+			   },
+			   {
+			       fullName: 'Артем Артем',
+			       university: 'РНЕТ',
+			       course: 5,
+			       birthDate: new Date(1998, 1, 10),
+			       photoUrl: 'img/ava06.jpg'
+			   }
+			];
+
+			let studentCardCont = document.getElementById("students");
+			let teacherCardCont = document.getElementById("teachers");
+
+			let school = new School("Tenzor");			
+
+			studentArr.forEach( function(item) { 
+				let student = school.addHuman(item);
+			} );
+
+			// school.delete('Артем Артем');
+
+			school.renderByType(studentCardCont, Student);
+			school.renderByType(teacherCardCont, Teacher);
+		</script>
+		
+	</main>
+</body>
+</html>
